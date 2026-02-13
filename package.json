@@ -1,0 +1,33 @@
+{
+  "name": "valentines-proposal-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "latest",
+    "next": "^16.1.6",
+    "postcss": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@types/node": "25.2.3",
+    "@types/react": "19.2.14",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest"
+  },
+  "description": "Welcome to the Valentine's Proposal App! This is a minimal, modern web application designed to create a romantic and engaging proposal experience inspired by Korean aesthetics. The application leverages Next.js, React, and Tailwind CSS to deliver a responsive and visually appealing interface.",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

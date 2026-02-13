@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind v4 custom properties */
+@theme {
+  --color-soft-pink: #f5e6e8;
+  --color-blush: #e8d5da;
+  --color-warm-white: #fdfcfc;
+  --color-deep-rose: #8b5a6b;
+  --color-rose-accent: #a67c8a;
+
+  --font-family-sans:
+    'Inter', 'Noto Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-family-serif: 'Playfair Display', ui-serif, Georgia, serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, monospace;
+
+  --box-shadow-soft: 0 4px 24px 0 rgba(250, 218, 221, 0.18);
+
+  --animate-fade-scale: fade-scale 0.8s ease-in-out;
+}
+
+@keyframes fade-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom styles for the Valentine's proposal website */
+body {
+  background-color: var(--color-warm-white);
+  color: var(--color-deep-rose);
+  font-family: var(--font-family-sans);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-serif);
+  color: var(--color-soft-pink);
+}
+
+.proposal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.soft-shadow {
+  box-shadow: var(--box-shadow-soft);
+}
+
+.fade-scale {
+  animation: var(--animate-fade-scale);
+}
+
+@media (max-width: 640px) {
+  .proposal-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

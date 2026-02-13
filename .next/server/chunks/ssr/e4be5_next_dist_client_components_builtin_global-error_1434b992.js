@@ -1,0 +1,3 @@
+module.exports=[3609,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(62955);a.n(d("[project]/vibecoding_project/dump-app/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},95702,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(62955);a.n(d("[project]/vibecoding_project/dump-app/node_modules/next/dist/client/components/builtin/global-error.js"))},62353,a=>{"use strict";a.i(3609);var b=a.i(95702);a.n(b)}];
+
+//# sourceMappingURL=e4be5_next_dist_client_components_builtin_global-error_1434b992.js.map

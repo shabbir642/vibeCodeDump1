@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_not-found/page.js")
+R.c("server/chunks/ssr/vibecoding_project_dump-app_f53af517._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__7cbb1bf4._.js")
+R.c("server/chunks/ssr/e4be5_next_dist_esm_build_templates_app-page_b22a3fad.js")
+R.c("server/chunks/ssr/[root-of-the-server]__5b6a7c47._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__e86dded9._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__7a864a0e._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__3099edb5._.js")
+R.c("server/chunks/ssr/e4be5_next_dist_client_components_ba5e8096._.js")
+R.c("server/chunks/ssr/e4be5_next_dist_client_components_builtin_forbidden_efc39aae.js")
+R.c("server/chunks/ssr/f08b3_project_dump-app__next-internal_server_app__not-found_page_actions_34c42746.js")
+R.m(85541)
+module.exports=R.m(85541).exports
