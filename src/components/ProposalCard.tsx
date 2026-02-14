@@ -18,15 +18,11 @@ const ProposalCard: React.FC = () => {
   const moveNoButton = () => {
     setHoverCount((prev) => prev + 1)
 
-    // Generate random percentage positions within the card container
-    const leftPercent = Math.random() * 60 + 20 // 20% to 80% within card
-    const topPercent = Math.random() * 40 + 40 // 40% to 80% within card (below header)
+    // Generate random percentage positions across the entire viewport
+    const leftPercent = Math.random() * 80 + 10 // 10% to 90% across screen
+    const topPercent = Math.random() * 70 + 15 // 15% to 85% across screen
 
     setNoBtnPos({ left: `${leftPercent}%`, top: `${topPercent}%` })
-
-    // Make YES button grow more gradually for smoother effect
-    const scaleIncrement = 0.2 + hoverCount * 0.08 // Smaller, smoother increments
-    setYesScale((prev) => Math.min(prev + scaleIncrement, 2.5)) // Reduced max scale
   }
 
   // Fade out proposal and show success message
@@ -46,7 +42,7 @@ const ProposalCard: React.FC = () => {
     <div className='min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-warm-white to-soft-pink/10'>
       <div
         ref={containerRef}
-        className='relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-soft-pink/30 p-8 md:p-12 max-w-4xl w-full min-h-[600px] overflow-hidden'>
+        className='relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-soft-pink/30 p-8 md:p-12 max-w-4xl w-full min-h-[600px]'>
         {!showSuccess ? (
           <div className='relative h-full fade-scale'>
             {/* Header Section */}
@@ -60,12 +56,7 @@ const ProposalCard: React.FC = () => {
             <div className='relative flex justify-between items-center gap-8 px-8 py-8'>
               <Button
                 variant='primary'
-                className='transition-all duration-500 ease-out'
-                style={{
-                  transform: `scale(${yesScale})`,
-                  zIndex: yesScale > 2 ? 10 : 2,
-                  transformOrigin: 'center center',
-                }}
+                className='transition-all duration-300 ease-out'
                 onClick={handleYes}>
                 Yes 💖
               </Button>
@@ -74,10 +65,10 @@ const ProposalCard: React.FC = () => {
                 variant='secondary'
                 className='transition-all duration-700 ease-out'
                 style={{
-                  position: hoverCount > 0 ? 'absolute' : 'static',
+                  position: hoverCount > 0 ? 'fixed' : 'static',
                   left: hoverCount > 0 ? noBtnPos.left : 'auto',
                   top: hoverCount > 0 ? noBtnPos.top : 'auto',
-                  zIndex: 3,
+                  zIndex: hoverCount > 0 ? 9999 : 3,
                   transform: hoverCount > 0 ? 'translate(-50%, -50%)' : 'none',
                   transition:
                     hoverCount > 0

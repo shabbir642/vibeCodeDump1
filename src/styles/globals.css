@@ -9,6 +9,10 @@
   --color-warm-white: #fdfcfc;
   --color-deep-rose: #8b5a6b;
   --color-rose-accent: #a67c8a;
+  --color-coral-orange: #eb7448;
+  --color-soft-orange: #f4a373;
+  --color-peach-cloud: #f7c7a0;
+  --color-light-peach: #f9d5b8;
 
   --font-family-sans:
     'Inter', 'Noto Sans', ui-sans-serif, system-ui, sans-serif;
@@ -28,6 +32,25 @@
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes float-cloud {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(5px);
+  }
+}
+
+@keyframes drift-cloud {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
   }
 }
 

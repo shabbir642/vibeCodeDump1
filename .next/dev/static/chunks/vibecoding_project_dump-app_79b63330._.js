@@ -11,10 +11,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2
 ;
 ;
 const Button = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].forwardRef(_c = ({ children, className = '', variant = 'primary', onClick, onMouseEnter, onTouchStart, style, disabled }, ref)=>{
-    const baseClasses = 'rounded-2xl px-8 py-4 font-bold text-lg shadow-2xl transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-offset-2 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed';
+    const baseClasses = 'rounded-full px-10 py-4 font-medium text-lg border transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-offset-1 active:scale-98 disabled:opacity-50 disabled:cursor-not-allowed';
     const variantClasses = {
-        primary: 'bg-gradient-to-r from-rose-accent to-deep-rose text-white hover:from-deep-rose hover:to-rose-accent hover:shadow-2xl hover:shadow-rose-accent/30 hover:-translate-y-2 focus:ring-rose-accent/50',
-        secondary: 'bg-white text-deep-rose border-2 border-blush hover:bg-blush hover:border-soft-pink hover:shadow-2xl hover:shadow-blush/40 hover:-translate-y-2 focus:ring-blush/50'
+        primary: 'bg-gray-900 text-white border-gray-900 hover:bg-gray-800 hover:border-gray-800 focus:ring-gray-500',
+        secondary: 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400 focus:ring-gray-300'
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
         ref: ref,
@@ -72,19 +72,15 @@ const ProposalCard = ()=>{
     // Move No button to random position on hover/click
     const moveNoButton = ()=>{
         setHoverCount((prev)=>prev + 1);
-        // Generate random percentage positions within the card container
-        const leftPercent = Math.random() * 60 + 20 // 20% to 80% within card
+        // Generate random percentage positions across the entire viewport
+        const leftPercent = Math.random() * 80 + 10 // 10% to 90% across screen
         ;
-        const topPercent = Math.random() * 40 + 40 // 40% to 80% within card (below header)
+        const topPercent = Math.random() * 70 + 15 // 15% to 85% across screen
         ;
         setNoBtnPos({
             left: `${leftPercent}%`,
             top: `${topPercent}%`
         });
-        // Make YES button grow more gradually for smoother effect
-        const scaleIncrement = 0.2 + hoverCount * 0.08 // Smaller, smoother increments
-        ;
-        setYesScale((prev)=>Math.min(prev + scaleIncrement, 2.5)); // Reduced max scale
     };
     // Fade out proposal and show success message
     const handleYes = ()=>{
@@ -103,7 +99,7 @@ const ProposalCard = ()=>{
         className: "min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-warm-white to-soft-pink/10",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             ref: containerRef,
-            className: "relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-soft-pink/30 p-8 md:p-12 max-w-4xl w-full min-h-[600px] overflow-hidden",
+            className: "relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-soft-pink/30 p-8 md:p-12 max-w-4xl w-full min-h-[600px]",
             children: !showSuccess ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "relative h-full fade-scale",
                 children: [
@@ -114,12 +110,12 @@ const ProposalCard = ()=>{
                             children: PROPOSAL_TEXT
                         }, void 0, false, {
                             fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                            lineNumber: 54,
+                            lineNumber: 50,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                        lineNumber: 53,
+                        lineNumber: 49,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -127,27 +123,22 @@ const ProposalCard = ()=>{
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$src$2f$components$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 variant: "primary",
-                                className: "transition-all duration-500 ease-out",
-                                style: {
-                                    transform: `scale(${yesScale})`,
-                                    zIndex: yesScale > 2 ? 10 : 2,
-                                    transformOrigin: 'center center'
-                                },
+                                className: "transition-all duration-300 ease-out",
                                 onClick: handleYes,
                                 children: "Yes 💖"
                             }, void 0, false, {
                                 fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                                lineNumber: 61,
+                                lineNumber: 57,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$src$2f$components$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 variant: "secondary",
                                 className: "transition-all duration-700 ease-out",
                                 style: {
-                                    position: hoverCount > 0 ? 'absolute' : 'static',
+                                    position: hoverCount > 0 ? 'fixed' : 'static',
                                     left: hoverCount > 0 ? noBtnPos.left : 'auto',
                                     top: hoverCount > 0 ? noBtnPos.top : 'auto',
-                                    zIndex: 3,
+                                    zIndex: hoverCount > 0 ? 9999 : 3,
                                     transform: hoverCount > 0 ? 'translate(-50%, -50%)' : 'none',
                                     transition: hoverCount > 0 ? 'left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)' : 'all 0.3s ease'
                                 },
@@ -158,13 +149,13 @@ const ProposalCard = ()=>{
                                 children: "No 🙈"
                             }, void 0, false, {
                                 fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                                lineNumber: 73,
+                                lineNumber: 64,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                        lineNumber: 60,
+                        lineNumber: 56,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -177,7 +168,7 @@ const ProposalCard = ()=>{
                                     children: "💕"
                                 }, void 0, false, {
                                     fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                                    lineNumber: 98,
+                                    lineNumber: 89,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -185,7 +176,7 @@ const ProposalCard = ()=>{
                                     children: "💖"
                                 }, void 0, false, {
                                     fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 90,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -193,24 +184,24 @@ const ProposalCard = ()=>{
                                     children: "💕"
                                 }, void 0, false, {
                                     fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 91,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                            lineNumber: 97,
+                            lineNumber: 88,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                        lineNumber: 96,
+                        lineNumber: 87,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                lineNumber: 51,
+                lineNumber: 47,
                 columnNumber: 11
             }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col items-center justify-center h-full fade-scale",
@@ -220,7 +211,7 @@ const ProposalCard = ()=>{
                         children: SUCCESS_TEXT
                     }, void 0, false, {
                         fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                        lineNumber: 106,
+                        lineNumber: 97,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -230,28 +221,28 @@ const ProposalCard = ()=>{
                             children: "🎉💖🎉"
                         }, void 0, false, {
                             fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                            lineNumber: 111,
+                            lineNumber: 102,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                        lineNumber: 110,
+                        lineNumber: 101,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                lineNumber: 105,
+                lineNumber: 96,
                 columnNumber: 11
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-            lineNumber: 47,
+            lineNumber: 43,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-        lineNumber: 46,
+        lineNumber: 42,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

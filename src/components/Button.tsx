@@ -26,13 +26,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref,
   ) => {
     const baseClasses =
-      'rounded-2xl px-8 py-4 font-bold text-lg shadow-2xl transition-all duration-300 ease-out focus:outline-none focus:ring-4 focus:ring-offset-2 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed'
+      'rounded-full px-10 py-4 font-medium text-lg border transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-offset-1 active:scale-98 disabled:opacity-50 disabled:cursor-not-allowed'
 
     const variantClasses = {
       primary:
-        'bg-gradient-to-r from-rose-accent to-deep-rose text-white hover:from-deep-rose hover:to-rose-accent hover:shadow-2xl hover:shadow-rose-accent/30 hover:-translate-y-2 focus:ring-rose-accent/50',
+        'bg-gray-900 text-white border-gray-900 hover:bg-gray-800 hover:border-gray-800 focus:ring-gray-500',
       secondary:
-        'bg-white text-deep-rose border-2 border-blush hover:bg-blush hover:border-soft-pink hover:shadow-2xl hover:shadow-blush/40 hover:-translate-y-2 focus:ring-blush/50',
+        'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400 focus:ring-gray-300',
     }
 
     return (
