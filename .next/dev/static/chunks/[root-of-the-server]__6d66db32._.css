@@ -46,8 +46,16 @@
   pointer-events: none;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .absolute {
   position: absolute;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .relative {
@@ -58,6 +66,10 @@
   position: static;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .left-1\/2 {
   left: 50%;
 }
@@ -66,8 +78,28 @@
   width: 100%;
 }
 
+.block {
+  display: block;
+}
+
+.contents {
+  display: contents;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .h-full {
@@ -97,6 +129,10 @@
 
 .transform {
   transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
+}
+
+.resize {
+  resize: both;
 }
 
 .flex-col {

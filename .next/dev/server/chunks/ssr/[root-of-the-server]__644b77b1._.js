@@ -121,6 +121,21 @@ const ProposalCard = ()=>{
                         className: "relative flex justify-between items-center gap-8 px-8 py-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$src$2f$components$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                variant: "primary",
+                                className: "transition-all duration-500 ease-out",
+                                style: {
+                                    transform: `scale(${yesScale})`,
+                                    zIndex: yesScale > 2 ? 10 : 2,
+                                    transformOrigin: 'center center'
+                                },
+                                onClick: handleYes,
+                                children: "Yes 💖"
+                            }, void 0, false, {
+                                fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
+                                lineNumber: 61,
+                                columnNumber: 15
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$src$2f$components$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 variant: "secondary",
                                 className: "transition-all duration-700 ease-out",
                                 style: {
@@ -138,22 +153,7 @@ const ProposalCard = ()=>{
                                 children: "No 🙈"
                             }, void 0, false, {
                                 fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                                lineNumber: 61,
-                                columnNumber: 15
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vibecoding_project$2f$dump$2d$app$2f$src$2f$components$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                variant: "primary",
-                                className: "transition-all duration-500 ease-out",
-                                style: {
-                                    transform: `scale(${yesScale})`,
-                                    zIndex: yesScale > 2 ? 10 : 2,
-                                    transformOrigin: 'center center'
-                                },
-                                onClick: handleYes,
-                                children: "Yes 💖"
-                            }, void 0, false, {
-                                fileName: "[project]/vibecoding_project/dump-app/src/components/ProposalCard.tsx",
-                                lineNumber: 82,
+                                lineNumber: 73,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0))
                         ]

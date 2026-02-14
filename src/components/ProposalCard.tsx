@@ -59,6 +59,18 @@ const ProposalCard: React.FC = () => {
             {/* Button Container */}
             <div className='relative flex justify-between items-center gap-8 px-8 py-8'>
               <Button
+                variant='primary'
+                className='transition-all duration-500 ease-out'
+                style={{
+                  transform: `scale(${yesScale})`,
+                  zIndex: yesScale > 2 ? 10 : 2,
+                  transformOrigin: 'center center',
+                }}
+                onClick={handleYes}>
+                Yes 💖
+              </Button>
+
+              <Button
                 variant='secondary'
                 className='transition-all duration-700 ease-out'
                 style={{
@@ -77,18 +89,6 @@ const ProposalCard: React.FC = () => {
                 onTouchStart={moveNoButton}
                 onClick={moveNoButton}>
                 No 🙈
-              </Button>
-
-              <Button
-                variant='primary'
-                className='transition-all duration-500 ease-out'
-                style={{
-                  transform: `scale(${yesScale})`,
-                  zIndex: yesScale > 2 ? 10 : 2,
-                  transformOrigin: 'center center',
-                }}
-                onClick={handleYes}>
-                Yes 💖
               </Button>
             </div>
 
